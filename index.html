@@ -3,11 +3,18 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://kit.fontawesome.com/c9d0113824.js" crossorigin="anonymous"></script>
+		<script
+			src="https://kit.fontawesome.com/c9d0113824.js"
+			crossorigin="anonymous"
+		></script>
 		<title>catimation</title>
+		<link rel="stylesheet" href="css/main.css" />
 	</head>
-	<body>
-		<i class="fa-solid fa-moon fa-spin fa-spin-reverse"></i>
-		<i class="fa-solid fa-sun-bright"></i>
+	<body data-mode="light">
+		<button class="theme-toggle" onclick="themeToggle()">
+			<i class="theme-toggle--curtain fa-solid fa-circle"></i>
+			<i class="theme-toggle__icon fa-solid fa-moon"></i>
+		</button>
 	</body>
+	<script src="js/themeToggle.js"></script>
 </html>

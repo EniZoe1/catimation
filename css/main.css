@@ -1,6 +1,102 @@
-*, *::before, *::after {
+[data-mode=dark] {
+  --background-color: #222;
+  --contrast-color: #fff;
+}
+
+[data-mode=light] {
+  --background-color: #fff;
+  --contrast-color: #222;
+}
+
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background-color);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.theme-toggle {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 6rem;
+  height: 6rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.theme-toggle .fa-solid {
+  color: var(--contrast-color);
+  position: absolute;
+  font-size: 5rem;
+  z-index: 1;
+}
+.theme-toggle .fa-solid.empty {
+  position: relative;
+  opacity: 0;
+}
+.theme-toggle .fa-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  z-index: 0;
+}
+.theme-toggle:hover .fa-circle {
+  -webkit-animation: curtainBubble 0.3s forwards;
+          animation: curtainBubble 0.3s forwards;
+}
+.theme-toggle:hover:this(.fa-sun) {
+  -webkit-clip-path: circle(115% at 50% 50%);
+          clip-path: circle(115% at 50% 50%);
+}
+.theme-toggle:hover .fa-moon, .theme-toggle:hover .fa-sun {
+  color: var(--background-color);
+}
+.theme-toggle .circle-mouseOut {
+  animation: curtainBubble 0.5s reverse forwards;
+}
+.theme-toggle .fa-moon,
+.theme-toggle .fa-sun {
+  z-index: 0;
+  pointer-events: none;
+}
+
+@-webkit-keyframes curtainBubble {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 7rem;
+  }
+}
+
+@keyframes curtainBubble {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 7rem;
+  }
 }/*# sourceMappingURL=main.css.map */
