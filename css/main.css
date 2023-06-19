@@ -23,8 +23,8 @@ html {
 
 body {
   background-color: var(--background-color);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
 }
 
 .theme-toggle {
@@ -67,13 +67,6 @@ body {
   -webkit-animation: curtainBubble 0.3s forwards;
           animation: curtainBubble 0.3s forwards;
 }
-.theme-toggle:hover:this(.fa-sun) {
-  -webkit-clip-path: circle(115% at 50% 50%);
-          clip-path: circle(115% at 50% 50%);
-}
-.theme-toggle:hover .fa-moon, .theme-toggle:hover .fa-sun {
-  color: var(--background-color);
-}
 .theme-toggle .circle-mouseOut {
   animation: curtainBubble 0.5s reverse forwards;
 }
@@ -81,6 +74,9 @@ body {
 .theme-toggle .fa-sun {
   z-index: 0;
   pointer-events: none;
+}
+.theme-toggle:hover .fa-moon, .theme-toggle:hover .fa-sun {
+  color: var(--background-color);
 }
 
 @-webkit-keyframes curtainBubble {

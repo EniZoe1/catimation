@@ -1,8 +1,7 @@
-let body = document.querySelector("body");
-let themeToggleButton = document.querySelector(".theme-toggle");
-let circle = document.querySelector(".fa-circle");
-let themeToggleIcon = document.querySelector(".theme-toggle__icon");
-
+const body = document.querySelector("body");
+const themeToggleButton = document.querySelector("button");
+const circle = document.querySelector(".fa-circle");
+const themeToggleIcon = document.querySelector(".theme-toggle__icon");
 function themeToggle() {
 	circle.classList.toggle("active");
 	circle.classList.toggle("active");
@@ -12,5 +11,5 @@ function themeToggle() {
 		body.setAttribute("data-mode", "light");
 	else body.setAttribute("data-mode", "dark");
 }
-// themeToggleButton.addEventListener("click", "themeToggle");
+themeToggleButton.addEventListener("click", themeToggle);
 // circle.addEventListener('mouseotu')
