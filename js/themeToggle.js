@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-const themeToggleButton = document.querySelector("button");
+const themeToggleButton = document.querySelector(".theme-toggle");
 const circle = document.querySelector(".fa-circle");
 const themeToggleIcon = document.querySelector(".theme-toggle__icon");
 function themeToggle() {
