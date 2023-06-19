@@ -49,14 +49,12 @@ body {
 		z-index: 0;
 	}
 	&:hover .fa-circle {
+		font-size: 7rem;
 		animation: curtainBubble 0.3s forwards;
 	}
 	// &:hover:this(.fa-sun) {
 	// 	clip-path: circle(115% at 50% 50%);
 	// }
-	.circle-mouseOut {
-		animation: curtainBubble 0.5s reverse forwards;
-	}
 	.fa-moon,
 	.fa-sun {
 		z-index: 0;
@@ -69,9 +67,9 @@ body {
 }
 @keyframes curtainBubble {
 	0% {
-		font-size: 0;
+		transform: scale(0);
 	}
 	100% {
-		font-size: 7rem;
+		transform: scale(1);
 	}
 }

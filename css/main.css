@@ -64,11 +64,9 @@ body {
   z-index: 0;
 }
 .theme-toggle:hover .fa-circle {
+  font-size: 7rem;
   -webkit-animation: curtainBubble 0.3s forwards;
           animation: curtainBubble 0.3s forwards;
-}
-.theme-toggle .circle-mouseOut {
-  animation: curtainBubble 0.5s reverse forwards;
 }
 .theme-toggle .fa-moon,
 .theme-toggle .fa-sun {
@@ -81,18 +79,22 @@ body {
 
 @-webkit-keyframes curtainBubble {
   0% {
-    font-size: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    font-size: 7rem;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes curtainBubble {
   0% {
-    font-size: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    font-size: 7rem;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }/*# sourceMappingURL=main.css.map */
