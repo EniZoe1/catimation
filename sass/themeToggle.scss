@@ -1,0 +1,59 @@
+.theme-toggle {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 6rem;
+	height: 6rem;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	.fa-solid {
+		color: var(--contrast-color);
+		position: absolute;
+		font-size: 5rem;
+		&.empty {
+			position: relative;
+			opacity: 0;
+		}
+		z-index: 1;
+	}
+	.fa-circle {
+		display: flex;
+		font-size: 0;
+		transition: color 0.3s;
+		// delay iteration-count direction fill-mode
+		z-index: 0;
+	}
+	&:hover .fa-circle {
+		font-size: 7rem;
+		animation: curtainBubble 0.3s forwards;
+	}
+	// &:hover:this(.fa-sun) {
+	// 	clip-path: circle(115% at 50% 50%);
+	// }
+	.fa-moon,
+	.fa-sun {
+		z-index: 0;
+		pointer-events: none;
+	}
+	&:hover .fa-moon,
+	&:hover .fa-sun {
+		color: var(--background-color);
+	}
+}
+path {
+	color: white;
+	fill: gold;
+	stroke: gold;
+	stroke-width: 0.1;
+	stroke-linejoin: round;
+}
+@keyframes curtainBubble {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
