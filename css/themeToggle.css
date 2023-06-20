@@ -32,9 +32,6 @@
   font-size: 5rem;
   z-index: 1;
 }
-.theme-toggle .fa-solid:hover {
-  color: var(--background-color);
-}
 .theme-toggle .fa-solid.empty {
   position: relative;
   opacity: 0;

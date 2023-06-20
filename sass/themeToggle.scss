@@ -21,9 +21,6 @@
 		color: var(--contrast-color);
 		position: absolute;
 		font-size: 5rem;
-		&:hover {
-			color: var(--background-color);
-		}
 		&.empty {
 			position: relative;
 			opacity: 0;
