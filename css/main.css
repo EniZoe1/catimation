@@ -118,7 +118,7 @@ main {
           justify-content: center;
 }
 main svg {
-  min-height: 500px;
+  min-height: 501px;
 }
 main .cat {
   display: -webkit-box;
