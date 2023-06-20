@@ -11,7 +11,11 @@ html {
 }
 body {
 	background-color: var(--background-color);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 	transition: background 0.2s;
+	font-size: 62.5%;
 }
 .wrapper {
 	margin: 0 auto;
@@ -19,20 +23,35 @@ body {
 	max-width: 1200px;
 }
 nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
 	padding: 20px 0;
 }
 main {
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
+	.wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	svg {
 		min-height: 501px;
 	}
 	.cat {
 		display: flex;
 		justify-content: center;
-		path {
-			fill: var(--contrast-color);
-			stroke: transparent;
+		svg {
+			transition: 0.3s;
+			&:hover {
+				transform: rotate(-10deg);
+			}
+			path {
+				fill: var(--contrast-color);
+				stroke: transparent;
+			}
 		}
 		&__head {
 			&__curves {

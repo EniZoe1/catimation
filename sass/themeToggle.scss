@@ -21,6 +21,9 @@
 		color: var(--contrast-color);
 		position: absolute;
 		font-size: 5rem;
+		&:hover {
+			color: var(--background-color);
+		}
 		&.empty {
 			position: relative;
 			opacity: 0;
@@ -31,7 +34,6 @@
 		display: flex;
 		font-size: 0;
 		transition: color 0.3s;
-		// delay iteration-count direction fill-mode
 		z-index: 0;
 	}
 	&:hover .fa-circle {
