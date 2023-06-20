@@ -42,8 +42,9 @@ main {
 		justify-content: center;
 		svg {
 			transition: 0.3s;
+			transform: rotate(-10deg);
 			&:hover {
-				transform: rotate(-10deg);
+				transform: rotate(0deg);
 			}
 			path {
 				fill: var(--contrast-color);

@@ -147,10 +147,12 @@ main .cat {
 main .cat svg {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-main .cat svg:hover {
   -webkit-transform: rotate(-10deg);
           transform: rotate(-10deg);
+}
+main .cat svg:hover {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 main .cat svg path {
   fill: var(--contrast-color);
