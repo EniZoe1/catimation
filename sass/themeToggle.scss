@@ -1,5 +1,14 @@
+[data-mode="dark"] {
+	--background-color: #222;
+	--contrast-color: #fff;
+}
+[data-mode="light"] {
+	--background-color: #fff;
+	--contrast-color: #222;
+}
 .theme-toggle {
 	position: relative;
+	margin: 0 2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -42,13 +51,7 @@
 		color: var(--background-color);
 	}
 }
-path {
-	color: white;
-	fill: gold;
-	stroke: gold;
-	stroke-width: 0.1;
-	stroke-linejoin: round;
-}
+
 @keyframes curtainBubble {
 	0% {
 		transform: scale(0);

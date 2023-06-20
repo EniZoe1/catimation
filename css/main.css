@@ -1,5 +1,16 @@
+[data-mode=dark] {
+  --background-color: #222;
+  --contrast-color: #fff;
+}
+
+[data-mode=light] {
+  --background-color: #fff;
+  --contrast-color: #222;
+}
+
 .theme-toggle {
   position: relative;
+  margin: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,14 +59,6 @@
   color: var(--background-color);
 }
 
-path {
-  color: white;
-  fill: gold;
-  stroke: gold;
-  stroke-width: 0.1;
-  stroke-linejoin: round;
-}
-
 @-webkit-keyframes curtainBubble {
   0% {
     -webkit-transform: scale(0);
@@ -77,16 +80,6 @@ path {
             transform: scale(1);
   }
 }
-[data-mode=dark] {
-  --background-color: #222;
-  --contrast-color: #fff;
-}
-
-[data-mode=light] {
-  --background-color: #fff;
-  --contrast-color: #222;
-}
-
 *,
 *::before,
 *::after {
@@ -104,4 +97,23 @@ body {
   background-color: var(--background-color);
   -webkit-transition: background 0.2s;
   transition: background 0.2s;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+nav {
+  padding: 20px 0;
+  background-color: rgba(17, 17, 17, 0.3843137255);
+}
+
+main svg {
+  min-height: 500px;
+}
+main .cat path {
+  fill: var(--contrast-color);
+  stroke: transparent;
 }/*# sourceMappingURL=main.css.map */

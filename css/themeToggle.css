@@ -1,5 +1,16 @@
+[data-mode=dark] {
+  --background-color: #222;
+  --contrast-color: #fff;
+}
+
+[data-mode=light] {
+  --background-color: #fff;
+  --contrast-color: #222;
+}
+
 .theme-toggle {
   position: relative;
+  margin: 0 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,14 +57,6 @@
 }
 .theme-toggle:hover .fa-moon, .theme-toggle:hover .fa-sun {
   color: var(--background-color);
-}
-
-path {
-  color: white;
-  fill: gold;
-  stroke: gold;
-  stroke-width: 0.1;
-  stroke-linejoin: round;
 }
 
 @-webkit-keyframes curtainBubble {
