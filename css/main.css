@@ -107,11 +107,26 @@ body {
 
 nav {
   padding: 20px 0;
-  background-color: rgba(17, 17, 17, 0.3843137255);
 }
 
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 main svg {
   min-height: 500px;
+}
+main .cat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 main .cat path {
   fill: var(--contrast-color);

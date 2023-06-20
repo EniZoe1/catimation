@@ -20,13 +20,16 @@ body {
 }
 nav {
 	padding: 20px 0;
-	background-color: #11111162;
 }
 main {
+	display: flex;
+	justify-content: center;
 	svg{
 		min-height: 500px;
 	}
 	.cat {
+		display: flex;
+		justify-content: center;
 		path {
 			fill: var(--contrast-color);
 			stroke: transparent;
