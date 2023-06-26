@@ -37,6 +37,7 @@
 		font-size: 7rem;
 		animation: curtainBubble 0.3s forwards;
 	}
+
 	// &:hover:this(.fa-sun) {
 	// 	clip-path: circle(115% at 50% 50%);
 	// }
@@ -49,6 +50,9 @@
 	&:hover .fa-sun {
 		color: var(--background-color);
 	}
+}
+nav:has(.theme-toggle:hover) + main .cat {
+	transform: rotate(0deg);
 }
 
 @keyframes curtainBubble {

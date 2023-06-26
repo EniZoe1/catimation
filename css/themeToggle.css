@@ -59,6 +59,11 @@
   color: var(--background-color);
 }
 
+nav:has(.theme-toggle:hover) + main .cat {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
 @-webkit-keyframes curtainBubble {
   0% {
     -webkit-transform: scale(0);
