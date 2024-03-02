@@ -30,12 +30,11 @@
 	.fa-circle {
 		display: flex;
 		font-size: 0;
-		transition: color 0.3s;
+		transition: color 0.3s, font-size 0.3s ease-out;
 		z-index: 0;
 	}
 	&:hover .fa-circle {
 		font-size: 7rem;
-		animation: curtainBubble 0.3s forwards;
 	}
 
 	// &:hover:this(.fa-sun) {
@@ -45,6 +44,7 @@
 	.fa-sun {
 		z-index: 0;
 		pointer-events: none;
+		transition: color 0.1s;
 	}
 	&:hover .fa-moon,
 	&:hover .fa-sun {
@@ -53,13 +53,4 @@
 }
 nav:has(.theme-toggle:hover) + main .cat {
 	transform: rotate(0deg);
-}
-
-@keyframes curtainBubble {
-	0% {
-		transform: scale(0);
-	}
-	100% {
-		transform: scale(1);
-	}
 }

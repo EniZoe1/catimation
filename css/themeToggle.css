@@ -41,19 +41,19 @@
   display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+  -webkit-transition: color 0.3s, font-size 0.3s ease-out;
+  transition: color 0.3s, font-size 0.3s ease-out;
   z-index: 0;
 }
 .theme-toggle:hover .fa-circle {
   font-size: 7rem;
-  -webkit-animation: curtainBubble 0.3s forwards;
-          animation: curtainBubble 0.3s forwards;
 }
 .theme-toggle .fa-moon,
 .theme-toggle .fa-sun {
   z-index: 0;
   pointer-events: none;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
 }
 .theme-toggle:hover .fa-moon, .theme-toggle:hover .fa-sun {
   color: var(--background-color);
@@ -62,26 +62,4 @@
 nav:has(.theme-toggle:hover) + main .cat {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-}
-
-@-webkit-keyframes curtainBubble {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes curtainBubble {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
 }/*# sourceMappingURL=themeToggle.css.map */
